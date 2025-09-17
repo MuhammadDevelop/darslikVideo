@@ -63,26 +63,93 @@ class UserOutput(BaseModel):
     email: str
     image: str
     name: Optional[str] = None
-
-# Ma'lumotlar ombori
 lessons = [
-    Lesson(id=1, category="Word darslari", title="Word kirish", description="Word dasturiga kirish va Glavnaya bo'limi",
-           subtitle="Word Nima uchun kerak?",
-           answer="Microsoft Word matn yaratish, tahrirlash va formatlash uchun kerak",
-           video_url="https://player.vimeo.com/video/1118563974?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"),
-    Lesson(id=2, category="Word darslari", title="Vstavka bo'limi bilan tanishish", description="Vstavka bo'limi haqida.",
-           subtitle="Vstavka bo'limi bizga nima uchun kerak?",
-           answer="Hujjatni boyitish, rasm, jadval va boshqa elementlarni qo‘shish uchun kerak.",
-           video_url="https://player.vimeo.com/video/1118566162?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"),
-    Lesson(id=3, category="Word darslari", title="Dizayn Maket vid bo'limlari", description="Dizayn va Maket vid bo'limlari haqida",
-           subtitle="Dizayn va Maket va vid bo'limida nimalar o'rganamiz?",
-           answer="Dizayn bo‘limida interfeys, shrift, tugmalar, sahifa ko‘rinishi, Maket bo‘limida esa joylashuv va o‘lchamlar sozlanadi",
-           video_url="https://player.vimeo.com/video/1118567468?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"),
-    Lesson(id=4, category="Excel darslari", title="Excelga kirish", description="Excel dasturiga kirish.",
-           subtitle="Excel Nima uchun kerak?",
-           answer="Excel maʼlumotlarni tartiblash, hisoblash va tahlil qilish uchun kerak.",
-           video_url="https://onlinetech.onrender.com/videos/excal-1.mp4"),
+    Lesson(
+        id=1,
+        category={"uz": "Word darslari", "rus": "Уроки Word", "eng": "Word lessons"},
+        title={"uz": "Word kirish", "rus": "Введение в Word", "eng": "Introduction to Word"},
+        description={
+            "uz": "Word dasturiga kirish va Glavnaya bo'limi",
+            "rus": "Введение в программу Word и раздел Главная",
+            "eng": "Introduction to Word program and Home section"
+        },
+        subtitle={
+            "uz": "Word nima uchun kerak?",
+            "rus": "Зачем нужен Word?",
+            "eng": "Why do we need Word?"
+        },
+        answer={
+            "uz": "Microsoft Word matn yaratish, tahrirlash va formatlash uchun kerak",
+            "rus": "Microsoft Word нужен для создания, редактирования и форматирования текста",
+            "eng": "Microsoft Word is used for creating, editing, and formatting text"
+        },
+        video_url="https://player.vimeo.com/video/1118563974"
+    ),
+    Lesson(
+        id=2,
+        category={"uz": "Word darslari", "rus": "Уроки Word", "eng": "Word lessons"},
+        title={"uz": "Vstavka bo'limi bilan tanishish", "rus": "Знакомство с разделом Вставка", "eng": "Introduction to Insert section"},
+        description={
+            "uz": "Vstavka bo'limi haqida.",
+            "rus": "О разделе Вставка.",
+            "eng": "About the Insert section."
+        },
+        subtitle={
+            "uz": "Vstavka bo'limi bizga nima uchun kerak?",
+            "rus": "Зачем нам раздел Вставка?",
+            "eng": "Why do we need the Insert section?"
+        },
+        answer={
+            "uz": "Hujjatni boyitish, rasm, jadval va boshqa elementlarni qo‘shish uchun kerak.",
+            "rus": "Чтобы обогатить документ: добавить изображения, таблицы и другие элементы.",
+            "eng": "To enrich the document: add images, tables, and other elements."
+        },
+        video_url="https://player.vimeo.com/video/1118566162"
+    ),
+    Lesson(
+        id=3,
+        category={"uz": "Word darslari", "rus": "Уроки Word", "eng": "Word lessons"},
+        title={"uz": "Dizayn Maket vid bo'limlari", "rus": "Разделы Дизайн, Макет и Вид", "eng": "Design, Layout, and View sections"},
+        description={
+            "uz": "Dizayn va Maket vid bo'limlari haqida",
+            "rus": "О разделах Дизайн, Макет и Вид",
+            "eng": "About Design, Layout, and View sections"
+        },
+        subtitle={
+            "uz": "Dizayn va Maket va vid bo'limida nimalar o'rganamiz?",
+            "rus": "Что изучаем в разделах Дизайн, Макет и Вид?",
+            "eng": "What do we learn in Design, Layout, and View sections?"
+        },
+        answer={
+            "uz": "Dizayn bo‘limida interfeys, shrift, tugmalar... Maket bo‘limida esa joylashuv va o‘lchamlar sozlanadi",
+            "rus": "В Дизайне — интерфейс, шрифты, кнопки... В Макете — расположение и размеры",
+            "eng": "In Design — interface, fonts, buttons... In Layout — positioning and sizes"
+        },
+        video_url="https://player.vimeo.com/video/1118567468"
+    ),
+    Lesson(
+        id=4,
+        category={"uz": "Excel darslari", "rus": "Уроки Excel", "eng": "Excel lessons"},
+        title={"uz": "Excelga kirish", "rus": "Введение в Excel", "eng": "Introduction to Excel"},
+        description={
+            "uz": "Excel dasturiga kirish.",
+            "rus": "Введение в программу Excel.",
+            "eng": "Introduction to Excel program."
+        },
+        subtitle={
+            "uz": "Excel nima uchun kerak?",
+            "rus": "Зачем нужен Excel?",
+            "eng": "Why do we need Excel?"
+        },
+        answer={
+            "uz": "Excel maʼlumotlarni tartiblash, hisoblash va tahlil qilish uchun kerak.",
+            "rus": "Excel нужен для упорядочивания, вычисления и анализа данных.",
+            "eng": "Excel is used for organizing, calculating, and analyzing data."
+        },
+        video_url="https://onlinetech.onrender.com/videos/excal-1.mp4"
+    ),
 ]
+
 
 TEMP_USERS: Dict[str, dict] = {}
 USERS = []
