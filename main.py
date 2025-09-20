@@ -146,7 +146,7 @@ lessons = [
             "rus": "Excel нужен для упорядочивания, вычисления и анализа данных.",
             "eng": "Excel is used for organizing, calculating, and analyzing data."
         },
-        video_url="https://onlinetech.onrender.com/videos/excal-1.mp4"
+        video_url="https://player.vimeo.com/video/excal-1.mp4"
     ),
      Lesson(
         id=5,
@@ -167,7 +167,7 @@ lessons = [
             "rus": "СУММ → используется для сложения чисел.МИН → возвращает наименьшее число из диапазона.МАКС → возвращает наибольшее число из диапазона.",
             "eng": "SUM → is used to add numbers together.MIN → returns the smallest number from a range.MAX → returns the largest number from a range."
         },
-        video_url="https://vimeo.com/manage/videos/1120360780"
+        video_url="https://player.vimeo.com/video/1120360780"
     ),
       Lesson(
         id=6,
@@ -188,7 +188,7 @@ lessons = [
             "rus": "Функция ЕСЛИ в Excel используется для задания условия.",
             "eng": "The IF function in Excel is used for giving conditions."
         },
-        video_url="https://vimeo.com/manage/videos/1120362544"
+        video_url="https://player.vimeo.com/video/1120362544"
     ),
 ]
 
