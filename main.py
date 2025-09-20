@@ -39,11 +39,11 @@ ADMIN_EMAIL = "muham20021202@gmail.com"
 # Modellar
 class Lesson(BaseModel):
     id: int
-    category: str
-    title: str
-    description: str
-    subtitle: str
-    answer: str
+    category: Dict[str, str]
+    title: Dict[str, str]
+    description: Dict[str, str]
+    subtitle: Dict[str, str]
+    answer: Dict[str, str]
     video_url: str
 
 class RegisterInput(BaseModel):
